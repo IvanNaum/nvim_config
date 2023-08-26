@@ -45,3 +45,20 @@ vim.g.netrw_banner = false -- hide banner above files
 vim.g.netrw_liststyle = 3 -- tree instead of plain view
 vim.g.netrw_browse_split = 3 -- vertical split window when Enter pressed on file
 
+-----------------------------------------------------------
+-- НАСТРОЙКИ ПОИСКА
+-----------------------------------------------------------
+-- Будет игнорировать размер букв при поиске
+opt.ignorecase = true        --Игнорировать размер букв
+opt.smartcase = true         --Игнор прописных букв
+
+-----------------------------------------------------------
+-- ПОЛЕЗНЫЕ ФИШКИ
+-----------------------------------------------------------
+-- Подсвечивает на доли секунды скопированную часть текста
+vim.api.nvim_exec([[
+augroup YankHighlight
+autocmd!
+autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
+augroup end
+]], false)
