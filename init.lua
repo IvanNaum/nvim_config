@@ -2,3 +2,6 @@
 -- Импорт модулей Lua
 -----------------------------------------------------------
 require('keymaps')
+require('settings')
+require('plugins')
+
