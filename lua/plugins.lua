@@ -7,7 +7,15 @@ return require('packer').startup(function(use)
   ---------------------------------------------------------
   -- ПЛАГИНЫ ВНЕШНЕГО ВИДА
   ---------------------------------------------------------
-  -- Тема в стиле Rose Pine
+  -- Информационная строка внизу
+  use "kyazdani42/nvim-web-devicons"
+  use { 'nvim-lualine/lualine.nvim',
+      requires = {'kyazdani42/nvim-web-devicons', opt = true},
+      config = function()
+        require('lualine').setup()
+      end, 
+    }
+  -- Тема 
   use({
     'NLKNguyen/papercolor-theme',
     as = 'papercolor-theme',
@@ -17,5 +25,18 @@ return require('packer').startup(function(use)
     vim.cmd('colorscheme PaperColor')
     end
   })
+
+
   ---------------------------------------------------------
+  -- МОДУЛИ РЕДАКТОРА
+  ---------------------------------------------------------
+
+
+  ---------------------------------------------------------
+  -- РАЗНОЕ
+  ---------------------------------------------------------
+  -- Даже если включена русская раскладка, то nvim-команды будут работать
+  use 'powerman/vim-plugin-ruscmd'
+
+
 end)

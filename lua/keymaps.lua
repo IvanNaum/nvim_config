@@ -10,7 +10,9 @@ map('', '<left>', ':echoe "Use hjkl, bro, only hardcore"<CR>', {noremap = true, 
 map('', '<right>', ':echoe "Use hjkl, bro, only hardcore"<CR>', {noremap = true, silent = false})
 -- <F5> разные вариации нумераций строк, можно переключаться на ходу
 map('n', '<F5>', ':exec &nu==&rnu? "se nu!" : "se rnu!"<CR>', default_opts)
-
+-- Переключение вкладок с помощью TAB или shift-tab (akinsho/bufferline.nvim)
+map('n', '<Tab>', ':tabn<CR>', default_opts)
+map('n', '<S-Tab>', ':tabp<CR>', default_opts)
 
 -----------------------------------------------------------
 -- РЕЖИМЫ

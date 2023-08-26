@@ -30,7 +30,7 @@ autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml,htmljinja setlocal 
 
 opt.so = 7                   --Отступ курсора от края экрана 
 opt.foldcolumn = '0'         --Ширина колонки для фолдов 
-opt.colorcolumn =  '119'     --Расположение цветной колонки
+opt.colorcolumn =  '89'     --Расположение цветной колонки
 
 -- remove line lenght marker for selected filetypes
 vim.cmd([[
