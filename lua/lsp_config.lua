@@ -19,7 +19,9 @@ require("mason-lspconfig").setup {
       "clangd", -- C/C++ 
 
       "pyright", -- Python 
+
       "html", -- HTML 
+      "emmet_language_server", -- Emmet  
       -- TODO CSS
       "tailwindcss", -- Tailwind CSS  
     },
