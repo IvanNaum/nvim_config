@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
       requires = {'kyazdani42/nvim-web-devicons', opt = true},
       config = function()
         require('lualine').setup()
-      end, 
+      end,
     }
   -- Тема 
   use({
@@ -30,13 +30,39 @@ return require('packer').startup(function(use)
   ---------------------------------------------------------
   -- МОДУЛИ РЕДАКТОРА
   ---------------------------------------------------------
+  -- автоматические закрывающиеся скобки
+  use { 'windwp/nvim-autopairs',
+      config = function()
+        require("nvim-autopairs").setup()
+      end,
+  }
+  use { 'numToStr/Comment.nvim',
+      config = function()
+        require('Comment').setup()
+      end
+  }
 
+  ---------------------------------------------------------
+  -- LSP И АВТОДОПОЛНЯЛКИ
+  ---------------------------------------------------------
+  use {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+  }
+  use {
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    -- Автодополнлялка к файловой системе
+    'hrsh7th/cmp-path',
+    'L3MON4D3/LuaSnip',
+  }
 
   ---------------------------------------------------------
   -- РАЗНОЕ
   ---------------------------------------------------------
   -- Даже если включена русская раскладка, то nvim-команды будут работать
   use 'powerman/vim-plugin-ruscmd'
-
 
 end)

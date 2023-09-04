@@ -20,7 +20,7 @@ opt.relativenumber = true    --Относительная нумерация
 opt.wrap = true              --Длинные линии будет видно 
 opt.expandtab = true         --??? 
 opt.tabstop = 4              --1 tab = 4 пробела 
-opt.smartindent = true 
+opt.smartindent = true
 opt.shiftwidth = 4           --Смещаем на 4 пробела
 
 -- 2 spaces for selected filetypes
@@ -30,7 +30,7 @@ autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml,htmljinja setlocal 
 
 opt.so = 7                   --Отступ курсора от края экрана 
 opt.foldcolumn = '0'         --Ширина колонки для фолдов 
-opt.colorcolumn =  '89'     --Расположение цветной колонки
+opt.colorcolumn =  '79'     --Расположение цветной колонки
 
 -- remove line lenght marker for selected filetypes
 vim.cmd([[
@@ -59,6 +59,6 @@ opt.smartcase = true         --Игнор прописных букв
 vim.api.nvim_exec([[
 augroup YankHighlight
 autocmd!
-autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
+autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=150}
 augroup end
 ]], false)
