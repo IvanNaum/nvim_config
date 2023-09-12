@@ -11,6 +11,7 @@ filetype indent plugin on
 syntax enable
 ]])
 opt.swapfile = false --Не создаем свап файлы
+vim.o.t_Co="256"
 
 ---------------------------------------------------------
 ---- ВИЗУАЛЬНЫЕ ОПЦИИ 

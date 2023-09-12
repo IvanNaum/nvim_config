@@ -45,11 +45,13 @@ return require('packer').startup(function(use)
   ---------------------------------------------------------
   -- LSP И АВТОДОПОЛНЯЛКИ
   ---------------------------------------------------------
+  -- LSP
   use {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
   }
+  -- Autocomplete
   use {
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
@@ -58,6 +60,16 @@ return require('packer').startup(function(use)
     'hrsh7th/cmp-path',
     'L3MON4D3/LuaSnip',
   }
+  -- Formatter
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
+    -- config = function()
+    --     require("null-ls").setup()
+    -- end,
+    requires = { "nvim-lua/plenary.nvim" },
+  })
+  use {"jay-babu/mason-null-ls.nvim"}
+
 
   ---------------------------------------------------------
   -- РАЗНОЕ
