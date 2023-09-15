@@ -26,6 +26,9 @@ map('i', 'kj', '<Esc>', { noremap = true })
 -----------------------------------------------------------
 -- Выключить подсветку поиска через комбинацию ,+<space>
 map('n', ',<space>', ':nohlsearch<CR>', { noremap = true })
-
+-- Поиск telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', ',ff', builtin.find_files, {})
+vim.keymap.set('n', ',fg', builtin.live_grep, {})
 
 map("n", "fm", "<cmd>lua vim.lsp.buf.format() <CR>", default_opts)

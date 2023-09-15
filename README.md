@@ -2,6 +2,10 @@
 
 ### Возможные проблемы
 1. Не установлен один из Nerd Fonts
+2. Не установлен ripgrep 
+```shell
+brew install ripgrep
+```
 
 ### Полезные ссылки
 1. Статьи от AlexRussianPyth на [хабре](https://habr.com/ru/articles/705090/)
